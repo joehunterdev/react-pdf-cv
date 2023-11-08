@@ -1,6 +1,6 @@
 # 📄 React PDF CV Generator
 
-A customizable PDF document using React components. Good if you're looking to code and want a quick start to react-pdf. I've scraped [my website using](https://joehunter.es) a html first approach as it best suits my needs but of course could be hooked into your CMS or repurposed. 
+A customizable PDF document using React components. Good if you're looking to code and want a quick start to react-pdf. Pulls content from [my website](https://joehunter.es) with a html first approach as it best suited my needs but of course could be hooked into your CMS or re-purposed. [Demo Here}(https://joehunter.dev/react-pdf-cv/)
 
 
 ## 🚀 Features
@@ -14,7 +14,7 @@ A customizable PDF document using React components. Good if you're looking to co
 
 ## 🏁 Getting Started
 
-To get started, simply clone the repository and run `npm install` to install the necessary dependencies. Then, run `npm run dev` to start the development server.
+To get started, simply clone the repository and run `npm install` to install the necessary dependencies. Then, run `npm run dev` to start the development server. 
 
 ## 💡 Usage
 
