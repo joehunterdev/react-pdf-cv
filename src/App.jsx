@@ -93,7 +93,7 @@ const App = () => {
     };
 
     const language = i18n.language || "en"; // get the current language
-    const url = `https://joehunter.es/api/?lang=${language}`; // construct the URL
+    const url = `${process.env.REACT_APP_API_URL}?lang=${language}`; // construct the URL using environment variable
     fetchData({ url }, assignData);
   }, [fetchData, i18n.language]);
 
