@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
 });
 
 // Define your component
-const Header = () => {
+const Header = ({fullName,primaryPosition}) => {
   const { t, i18n } = useTranslation();
 
   return (
@@ -91,10 +91,10 @@ const Header = () => {
         </View>
         <View>
           <View>
-            <Text style={styles.headingPrimary}>Joe Hunter</Text>
+            <Text style={styles.headingPrimary}>{fullName}</Text>
           </View>
           <View>
-            <Text style={styles.headingSecondary}>{t("myProfession")}</Text>
+            <Text style={styles.headingSecondary}>{primaryPosition}</Text>
           </View>
           <View style={styles.containerIcons}>
             <View style={{ flexDirection: "row", justifyContent: "center" }}>
@@ -102,19 +102,16 @@ const Header = () => {
                 platformName="GitHub"
                 url="https://github.com/joehunterdev"
                 icon={GitHubIcon}
-                imageUrl="https://img.icons8.com/material/200/03f8bd/facebook.png"
               />
               <HeaderIcon
                 platformName="Facebook"
                 url="https://www.facebook.com/joe.hunter.dev"
                 icon={FacebookIcon}
-                imageUrl="https://img.icons8.com/material/96/03f8bd/facebook.png"
               />
               <HeaderIcon
                 platformName="LinkedIn"
                 url="https://www.linkedin.com/in/joseph-hunter-594832220/"
                 icon={LinkedInIcon}
-                imageUrl="https://img.icons8.com/material/96/03f8bd/linkedin.png"
               />
             </View>
           </View>

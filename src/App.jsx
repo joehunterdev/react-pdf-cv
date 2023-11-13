@@ -77,6 +77,8 @@ const App = () => {
   };
 
   const { isLoading, error, sendRequest: fetchData } = useHttp();
+  const [fullName, setFullName] = useState("");
+  const [primaryPosition, setPrimaryPosition] = useState("");
   const [experiences, setExperiences] = useState([]);
   const [aboutDescription, setAboutDescription] = useState("");
   const [contactInfo, setContactInfo] = useState([]);
@@ -85,6 +87,8 @@ const App = () => {
 
   useEffect(() => {
     const assignData = (data) => {
+      setFullName(data.fullName);
+      setPrimaryPosition(data.primaryPosition);
       setExperiences(data.experiences);
       setAboutDescription(data.about);
       setContactInfo(data.contactDetails);
@@ -93,8 +97,7 @@ const App = () => {
     };
 
     const language = i18n.language || "en"; // get the current language
-    const url = `${process.env.REACT_APP_API_URL}?lang=${language}`; // construct the URL using environment variable
-    fetchData({ url }, assignData);
+    const url = `${import.meta.env.VITE_APP_API_URL}?lang=${language}`;    fetchData({ url }, assignData);
   }, [fetchData, i18n.language]);
 
   return (
@@ -121,7 +124,7 @@ const App = () => {
             <View style={styles.pageBackgroundContainer}>
               <Image src={BackgroundPageOne} style={styles.imageBackground} />
             </View>
-            <Header />
+            <Header fullName={fullName} primaryPosition={primaryPosition} />
             <AboutMe
               aboutDescription={aboutDescription}
               contactInfo={contactInfo}
@@ -156,7 +159,10 @@ const App = () => {
               />
             ))}
           </Page>
-          <Page size="A4" style={{ ...styles.page, ...styles.whiteText, paddingTop:20 }}>
+          <Page
+            size="A4"
+            style={{ ...styles.page, ...styles.whiteText, paddingTop: 20 }}
+          >
             <View style={styles.pageBackgroundContainer}>
               <Image src={BackgroundPageOne} style={styles.imageBackground} />
             </View>
