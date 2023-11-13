@@ -4,7 +4,7 @@ import ProfileImage from "../assets/image/cv-square_300x300.jpg";
 import headerBackground from "../assets/image/code-bkg.jpg";
 import HeaderIcon from "./HeaderIcon";
 import { useTranslation } from "react-i18next";
-import FacebookIcon from "../assets/image/facebook.png";
+import InternetIcon from "../assets/image/internet.png";
 import GitHubIcon from "../assets/image/github.png";
 import LinkedInIcon from "../assets/image/linkedin.png";
 
@@ -104,9 +104,10 @@ const Header = ({fullName,primaryPosition}) => {
                 icon={GitHubIcon}
               />
               <HeaderIcon
-                platformName="Facebook"
-                url="https://www.facebook.com/joe.hunter.dev"
-                icon={FacebookIcon}
+                platformName="Website"
+                url="https://joehunter.es"
+                icon={InternetIcon}
+                src="https://img.icons8.com/material/200/03f8bd/internet.png"
               />
               <HeaderIcon
                 platformName="LinkedIn"
