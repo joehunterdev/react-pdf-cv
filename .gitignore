@@ -6,13 +6,16 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
 node_modules
 dist
 dist-ssr
 *.local
+package-lock.json
+/react-pdf/
 
 # Editor directories and files
+ /_dev/*
+ /assets/image/*
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -23,3 +26,4 @@ dist-ssr
 *.sln
 *.sw?
 *.env
+
