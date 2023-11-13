@@ -68,7 +68,8 @@
     - [] Params from url to language switch integration
     - [x] Lang file
     - [x] Re-Template
-
+    - [x]  Title and Profession
+    - [ ] Export with filename 
 ### Techincal debt:
 
 - [x] Repeatedly Downloading Pdfs and then opening them
@@ -117,3 +118,4 @@ Most importantly skim over all of requirements and follow up with adjustments
 - flex box works / horizontal aligned divs
 - [x] How to fit across various pages
     - Has built in page breaks wrapper engine set wrap={false}
+- [] Exporting Filename https://codesandbox.io/s/polished-https-uvzew?file=/src/App.js
