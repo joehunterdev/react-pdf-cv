@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 
   textBody: {
     fontFamily: "TitilliumWeb-SemiBold",
-    fontSize: 12,
+    fontSize: 10,
     fontWeight: "400",
   },
   headingPrimary: {

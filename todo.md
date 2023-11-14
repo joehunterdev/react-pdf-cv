@@ -56,10 +56,11 @@
         - [x] Add awards and
         - [x] Style awards ?
             - [] Move Certs up ?
-    - [ ] Skills block ?
-        - [] Card
-        - [] Button grey bordered
-        - [] x3 Icons
+    - [x] Skills block 
+        - [x] Card
+        - [x] Button grey bordered
+        - [x] x4 Icons
+        - [x] Fill Col with flexbox
 
 
 - [x] Data fetching

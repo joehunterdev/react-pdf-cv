@@ -20,6 +20,7 @@ import ProfileImage from "./assets/image/cv-square_300x300.jpg";
 import Header from "./Components/Header";
 import AboutMe from "./Components/AboutMe";
 import Experience from "./Components/Experience";
+import Skills from "./Components/Skills";
 import Education from "./Components/Education";
 import Certificates from "./Components/Certificates";
 import TitilliumWebBlack from "./assets/fonts/TitilliumWeb-Black.ttf";
@@ -80,6 +81,7 @@ const App = () => {
   const [fullName, setFullName] = useState("");
   const [primaryPosition, setPrimaryPosition] = useState("");
   const [experiences, setExperiences] = useState([]);
+  const [skills, setSkills] = useState([]);
   const [aboutDescription, setAboutDescription] = useState("");
   const [contactInfo, setContactInfo] = useState([]);
   const [education, setEducation] = useState([]);
@@ -89,17 +91,18 @@ const App = () => {
     const assignData = (data) => {
       setFullName(data.fullName);
       setPrimaryPosition(data.primaryPosition);
+      setSkills(data.skills);
       setExperiences(data.experiences);
       setAboutDescription(data.about);
       setContactInfo(data.contactDetails);
       setEducation(data.education);
       setCertification(data.certificates[0]);
     };
-
+    
     const language = i18n.language || "en"; // get the current language
-    const url = `${import.meta.env.VITE_APP_API_URL}?lang=${language}`;    fetchData({ url }, assignData);
+    const url = `${import.meta.env.VITE_APP_API_URL}?lang=${language}`;
+    fetchData({ url }, assignData);
   }, [fetchData, i18n.language]);
-
   return (
     <div className="App">
       <div className="container content-center">
@@ -129,6 +132,12 @@ const App = () => {
               aboutDescription={aboutDescription}
               contactInfo={contactInfo}
             />
+            {/* <View>
+              <Text style={styles.headingPrimary}>
+                {t("skills")}
+              </Text>
+            </View> */}
+            <Skills skills={skills} />
             <View>
               <Text style={styles.headingPrimary}>
                 {t("professionalExperience")}
@@ -141,7 +150,8 @@ const App = () => {
                 company={experiences[0].company}
                 description={experiences[0].description}
                 summary={experiences[0].summary}
-              />
+                wrap={true}
+                />
             )}
           </Page>
           <Page size="A4" style={{ ...styles.page, ...styles.whiteText }}>
