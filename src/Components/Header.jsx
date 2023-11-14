@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
 });
 
 // Define your component
-const Header = ({fullName,primaryPosition}) => {
+const Header = ({ fullName, primaryPosition }) => {
   const { t, i18n } = useTranslation();
 
   return (
@@ -107,7 +107,7 @@ const Header = ({fullName,primaryPosition}) => {
                 platformName="Website"
                 url="https://joehunter.es"
                 icon={InternetIcon}
-                src="https://img.icons8.com/material/200/03f8bd/internet.png"
+                // src="https://img.icons8.com/material/200/03f8bd/internet.png"
               />
               <HeaderIcon
                 platformName="LinkedIn"

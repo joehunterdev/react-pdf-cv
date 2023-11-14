@@ -25,7 +25,7 @@ Font.register({
 
 const styles = StyleSheet.create({
   body: {
-    fontSize: 12,
+    fontSize: 11,
     marginBottom: 5,
     fontFamily: "TitilliumWeb-SemiBold",
     fontWeight: 600,

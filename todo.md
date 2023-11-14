@@ -1,7 +1,7 @@
 ### TODO
 
 - [ ] Alias on cv / curriculum seo
-- [ ] Remove unwanted from repo
+- [x] Remove unwanted from repo
 - [ ] Add new repo for project
 - [ ] Add icons js for project
 - [ ] Custom JH favicon
@@ -26,17 +26,23 @@
 - [x] Load content fetch useEffect / useCallback
 - [ ] Page
     - [x] Custom background
-        - [ ] Works however have to manually insert this background for each page
-    - [ ] Flexbox is to continue implementing should we continue building
+        - [x] Works however have to manually insert this background for each page
+    - [x] Flexbox is to continue implementing should we continue building
 - [ ] Header
     - [x] Custom Background
     - [x] Profile image
     - [x] My name
     - [x] Subtitle 1 Custom Bold font
     - [x] Subtitle 2 Custom Font
+        - [ ] Skills block ?
+    - [ ] Language switcher ¿?
+    - [ ] Make available on website
+
 - [x] About me block ?
     - [x] Main text
     - [x] Contact info
+        - [] Add Website URL 
+        
 - [ ] Experiences block
     - [ ] Main Heading block
     - [x] 3 col flexbox
@@ -50,7 +56,11 @@
         - [x] Add awards and
         - [x] Style awards ?
             - [] Move Certs up ?
-    - [] Skills block ?
+    - [ ] Skills block ?
+        - [] Card
+        - [] Button grey bordered
+        - [] x3 Icons
+
 
 - [x] Data fetching
     - [x] Setup a json api
