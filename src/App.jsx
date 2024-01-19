@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     top: "0px",
     position: "absolute",
     height: "841px",
-    weight: "100%",
+    width: "100%",
     backgroundColor: "#606060",
   },
   headingPrimary: {
