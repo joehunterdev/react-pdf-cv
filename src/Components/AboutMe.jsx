@@ -42,11 +42,12 @@ const styles = StyleSheet.create({
     padding:4,
   },
 
-  textBody: {
+  textDescription: {
     fontFamily: "TitilliumWeb-SemiBold",
     fontSize: 10,
     fontWeight: "400",
   },
+  
   headingPrimary: {
     fontSize: 16,
     fontWeight: "700",
@@ -64,7 +65,7 @@ const AboutMe = ({ aboutDescription, contactInfo }) => {
       <View style={styles.containerAbout}>
         <Text style={styles.headingPrimary}>{t("aboutMe")}</Text>
         <View style={styles.containerAboutDescription}>
-          <Text style={styles.textBody}>{cleanText(aboutDescription)}</Text>
+          <Text style={styles.textDescription}>{cleanText(aboutDescription)}</Text>
         </View>
       </View>
       <ContactInfo contactInfo={contactInfo} />

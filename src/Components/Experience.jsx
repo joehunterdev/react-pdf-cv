@@ -1,11 +1,10 @@
 import React from "react";
-import { Text, View, Image, StyleSheet,Font } from "@react-pdf/renderer";
+import { Text, View, Image, StyleSheet, Font } from "@react-pdf/renderer";
 import { cleanText } from "../util/utils";
 import SourceCode from "../assets/image/source-code.png";
 import Services from "../assets/image/services.png";
 import Console from "../assets/image/console.png";
 import { useTranslation } from "react-i18next";
-
 
 import TitilliumWebBlack from "../assets/fonts/TitilliumWeb-Black.ttf";
 
@@ -33,9 +32,7 @@ const styles = StyleSheet.create({
   containerExperience: {
     margin: 20,
     backgroundColor: "rgba(0, 0, 0, 0.4)",
-    fontSize: 12,
     color: "#fff",
-
   },
   containerCols: {
     flexDirection: "row",
@@ -53,6 +50,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     fontFamily: "TitilliumWeb-SemiBold",
     fontWeight: 400,
+    fontSize: 12,
   },
   icon: {
     width: 18,
@@ -60,8 +58,7 @@ const styles = StyleSheet.create({
   },
   listColumnInner: {
     paddingLeft: "2%",
-    fontSize: 11,
-    fontWeight: 400,
+    fontSize: 10,
   },
   containerPositionHeading: {
     flexDirection: "row",
@@ -71,8 +68,12 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(3, 248, 189, 0.9)",
     fontFamily: "TitilliumWeb-Black",
   },
-  description: {
+  textDescription: {
     padding: 10,
+    // fontSize: 9,
+    fontFamily: "TitilliumWeb-SemiBold",
+    fontSize: 8,
+    fontWeight: "400",
   },
   textPeriod: {
     fontSize: 10,
@@ -89,6 +90,11 @@ const styles = StyleSheet.create({
     fontWeight: "200",
     fontFamily: "TitilliumWeb-Black",
   },
+  bulletPoint: {
+    fontSize: 9,
+    fontFamily: "TitilliumWeb-SemiBold",
+    fontWeight: 100,
+  }
 });
 
 const Experience = ({ period, title, company, description, summary }) => {
@@ -106,7 +112,7 @@ const Experience = ({ period, title, company, description, summary }) => {
           <Text style={styles.textCompany}>{company}</Text>
         </View>
       </View>
-      <View style={styles.description}>
+      <View style={styles.textDescription}>
         <Text style={styles.body}>{cleanText(description)}</Text>
       </View>
 
@@ -123,7 +129,7 @@ const Experience = ({ period, title, company, description, summary }) => {
           <View style={styles.listColumnInner}>
             {summary.design.map((item, index) => (
               <Text key={index}>
-                <Text style={{ marginHorizontal: 8 }}>• </Text>
+                <Text style={styles.bulletPoint}>• </Text>
                 {item}
               </Text>
             ))}
@@ -141,7 +147,7 @@ const Experience = ({ period, title, company, description, summary }) => {
           <View style={styles.listColumnInner}>
             {summary.solutions.map((item, index) => (
               <Text key={index}>
-                <Text style={{ marginHorizontal: 8 }}>• </Text>
+                <Text style={styles.bulletPoint}>• </Text>
                 {item}
               </Text>
             ))}
@@ -158,10 +164,7 @@ const Experience = ({ period, title, company, description, summary }) => {
           </View>
           <View style={styles.listColumnInner}>
             {summary.management.map((item, index) => (
-              <Text key={index}>
-                <Text style={{ marginHorizontal: 8 }}>• </Text>
-                {item}
-              </Text>
+              <Text key={index}><Text style={styles.bulletPoint}>• </Text>{item}</Text>
             ))}
           </View>
         </View>

@@ -7,13 +7,15 @@ const styles = StyleSheet.create({
     margin: 10,
     textAlign: "left",
     flexDirection: "row",
+    flexWrap: "wrap",
+    flexGrow: 1,
   },
   certImageContainer: {
     position: "relative", // set position to relative
-    width: "100%",
+    width: "30%",
     padding: 4,
     margin:4,
-  },
+   },
   certImage: {
     padding:"4px",
     borderStyle:"outset",

@@ -31,9 +31,8 @@ const styles = StyleSheet.create({
     fontWeight: 600,
   },
   containerSkills: {
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 10,
+    margin: 20,
+
 
     backgroundColor: "rgba(0, 0, 0, 0.4)",
     fontSize: 12,

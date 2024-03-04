@@ -20,20 +20,26 @@ Font.register({
 });
 const styles = StyleSheet.create({
   containerEducation: {
-    fontSize: 11,
+    fontSize: 12,
     flexDirection: "row",
     backgroundColor: "rgba(0, 0, 0, 0.4)",
     margin: 20,
     fontFamily: "TitilliumWeb-SemiBold",
     fontWeight: 400,
+    justifyContent: "space-between", // Add this line
   },
   containerColInner: {
-    flexGrow: 2,
-    flexWrap: "wrap",
+    // flex: 1 1 "auto", // TODO: Can we levarge this ?
+    flexDirection: "column",
+    // flexWrap: 'wrap',
+    alignItems: "flex-start",
     padding: 4,
-    marginLeft:4,
-    // border: "1px solid #ccc",
-    width: "30%",
+    marginLeft: 4,
+  },
+  containerList: {
+    width: "100%",
+    fontSize: 10,
+    marginBottom:10,
   },
   containerAwardedHeading: {
     flexDirection: "row",
@@ -53,7 +59,13 @@ const styles = StyleSheet.create({
   },
   headingTitled: {
     fontWeight: 800,
+    width: "100%",
   },
+  bulletPoint: {
+    fontSize: 9,
+    fontFamily: "TitilliumWeb-SemiBold",
+    fontWeight: 100,
+  }
 });
 
 const Education = ({ education }) => {
@@ -63,22 +75,16 @@ const Education = ({ education }) => {
   }
   return (
     <>
-      <View style={styles.containerEducation} wrap={false}>
-        <View style={styles.containerAwardedHeading}>
-          <Text>{t("awarded")}</Text>
-        </View>
+      <View style={styles.containerEducation}>
         {education.map((item, index) => (
           <View key={index} style={styles.containerColInner}>
             <View>
-              <Text style={styles.headingPeriod}>{item.period}</Text>
-            </View>
-            <View>
-              <Text style={styles.headingTitled}>{item.titled}</Text>
+              <Text style={styles.headingTitled}>{item.titled}:</Text>
             </View>
             <View style={styles.containerList}>
               {item.awarded.map((award, awardIndex) => (
                 <Text key={awardIndex}>
-                  <Text style={{ marginHorizontal: 8 }}>• </Text>
+                  <Text style={styles.bulletPoint}>• </Text>
                   {award}
                 </Text>
               ))}

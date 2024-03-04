@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   containerContactInfo: {
     flex: 1.3,
     flexDirection: "column",
-    fontSize: 12,
+    fontSize: 10,
     fontFamily: "TitilliumWeb-SemiBold",
     fontWeight: 400,
   },
@@ -35,13 +35,18 @@ const styles = StyleSheet.create({
   colLeft: {
     flex: 0.7,
     fontWeight: "700",
+    
   },
   colRight: {
     flex: 2.3,
     fontWeight: "400",
     color: "rgba(3, 248, 189, 0.9)",
-    fontSize: 10,
   },
+  contactInfoHeading:{
+    fontSize: 10,
+    fontFamily: "TitilliumWeb-SemiBold",
+    fontWeight: 400,
+  }
 });
 const ContactInfo = ({ contactInfo }) => {
   const { t, i18n } = useTranslation();

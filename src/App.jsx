@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#606060",
   },
   headingPrimary: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "700",
     textAlign: "center",
     fontFamily: "TitilliumWeb-Black",
@@ -103,6 +103,7 @@ const App = () => {
     const url = `${import.meta.env.VITE_APP_API_URL}?lang=${language}`;
     fetchData({ url }, assignData);
   }, [fetchData, i18n.language]);
+
   return (
     <div className="App">
       <div className="container content-center">
@@ -116,8 +117,7 @@ const App = () => {
         </button>
         <button
           className="btn btn-primary"
-          onClick={() => changeLanguage("es")}
-        >
+          onClick={() => changeLanguage("es")}>
           Español
         </button>
       </div>
@@ -132,11 +132,11 @@ const App = () => {
               aboutDescription={aboutDescription}
               contactInfo={contactInfo}
             />
-            {/* <View>
+            <View>
               <Text style={styles.headingPrimary}>
                 {t("skills")}
               </Text>
-            </View> */}
+            </View>
             <Skills skills={skills} />
             <View>
               <Text style={styles.headingPrimary}>
@@ -171,7 +171,7 @@ const App = () => {
           </Page>
           <Page
             size="A4"
-            style={{ ...styles.page, ...styles.whiteText, paddingTop: 20 }}
+            style={{ ...styles.page, ...styles.whiteText }}
           >
             <View style={styles.pageBackgroundContainer}>
               <Image src={BackgroundPageOne} style={styles.imageBackground} />
